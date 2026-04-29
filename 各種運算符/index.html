@@ -1,4 +1,4 @@
-5<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,9 @@
 </head>
 <body>
     <script>
+        //算術運算符
         var num1 = 10;
         var num2 = 5;
-
-        //算術運算符
         console.log(num1 + num2); //加
         console.log(num1 - num2); //減
         console.log(num1 * num2); //乘
@@ -18,16 +17,17 @@
         console.log(num1 % num2); //餘
 
         //(++在前，先自增在運算)自增or自減運算符 -> 當前值+1 or -1
-        var num3 = 100
+        var num3 = 100;
         console.log(++num3); //先num3 + 1，後console出101
         
-        var num4 = 100
+        var num4 = 100;
         console.log(--num4); //先num4 - 1，後console出99
         
         //(++在後，先運算在自增)
-        var num5 = 20
+        var num5 = 20;
         console.log(num5++); //先console出20，後num4 + 1 = 21
         console.log(num5); //21
+
 
 
         //賦值運算符
@@ -35,32 +35,50 @@
         var numb2 = numb1;
         console.log(numb1); //10
         console.log(numb2); //10
-
-
-        // + - * / 
         //numb2 = numb2 + numb1
         console.log(numb2 += numb1)
+
 
 
         //比較運算符
         var a = 10;
         var b = 20;
         
-        // >  <  >=  <=  ==  ===  !=  !==
+        // >  <  >=  <=
         console.log(a > b); //false
         console.log(a == b); //false
 
-
         var c = 10;
         var d = "10";
+        //==  ===  !=  !==
         console.log(a == b); //ture
         // === 嚴格相等 (比較類型)
         console.log(a === b); //false
-
         // !== 嚴格不相等
         console.log(a !== b); //true
 
 
+        //布林運算符  !  &&  ||
+        //取反運算符  !
+        var flag = false;
+        console.log(!flag); //true
+        console.log(!null);
+        console.log(!undefined);
+        console.log(!0);
+        console.log(!NaN);
+        console.log(!false);
+        
+        console.log(!100); //false
+        console.log(!"ivan");
+        console.log(!{name: "ivan"});
+
+        //且運算符  &&
+        //任意條件不滿足即為false
+        console.log((10<20) && (20<30)); //ture
+
+        //或運算符  ||
+        //任意條件滿足則為true
+        console.log((10<20) || (20>=30)); //true
     </script>
 </body>
 </html>
