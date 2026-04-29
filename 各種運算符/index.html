@@ -46,10 +46,20 @@
         var a = 10;
         var b = 20;
         
-        // > < >= <= != "==" "===" "!=="
+        // >  <  >=  <=  ==  ===  !=  !==
         console.log(a > b); //false
-        console.log(a = b); //false
-        
+        console.log(a == b); //false
+
+
+        var c = 10;
+        var d = "10";
+        console.log(a == b); //ture
+        // === 嚴格相等 (比較類型)
+        console.log(a === b); //false
+
+        // !== 嚴格不相等
+        console.log(a !== b); //true
+
 
     </script>
 </body>
