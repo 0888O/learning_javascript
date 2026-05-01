@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //基礎知識
+        var names = [];
+        names[0] = "danny"
+        console.log(names);
+        
+        var arr = [1, "ewe", true];
+        console.log(arr[2]);
+        console.log(arr.length); //抓取數組長度
+
+
+        //循環 : for
+        var users = ['iven', 'danny', 'betty', 'silly']
+        for(var i=0 ; i<users.length ; i++){
+            console.log(users[i]);
+        }
+
+        for(var i in users){
+            console.log(users[i]);
+        }
+
+
+        //Array.isArray(n) : 靜態方法，判斷n是否為數組
+        var ac = ['abc', 123, true];
+        console.log(Array.isArray(ac)); //true
+        
+
+        //push(n) : 添加n到數組後
+        var ac1 = ['hello'];
+        ac1.push('yo', 123);
+        console.log('ac1=  '+ac1);
+        console.log(ac1.push(false)); //返回數組長度
+
+
+        //pop() : 刪除數組的最後一個元素
+        var ac2 = [123, 'day', true, NaN];
+        ac2.pop();
+        console.log(ac2);
+        console.log(ac2.pop()); //返回將刪除的元素
+
+
+        //shift() : 刪除數組的第一個元素
+        var ac3 = [123, 'acb', 'frank'];
+        ac3.shift();
+        console.log(ac3);
+        console.log(ac3.shift()); //返回將刪除的元素
+
+        var ac4 = [];
+        ac4.shift();
+        console.log(ac4); //undefined
+        
+
+        //unshift(n) : 添加n到數組前
+        var ac5 = [123];
+        ac5.unshift('abc');
+        console.log('ac5=  '+ac5);
+        
+        //join(n) : 以n作為分隔符號，並返回一個字符串
+        var ac6 = [10, 20, 30, null, undefined];
+        console.log(ac6.join()); //默認以 , 分割
+        console.log(ac6.join("|"));
+        var ac7 = ['abc',123, null, undefined]
+        console.log(ac6.join());//若有null undefined會返回空字符串
+        
+        //split(n) : 以n分割並返回一個數組
+        var ac8 = [123, 'ode', true, 'world'];
+        var result = ac8.join('|');
+        console.log(result.split('|'));
+        
+        //concat(n) : 合併多個數組 -> 常用於上拉加載,合併數據
+        var a0 = ['hello'];
+        var a1 = ['world'];
+        var a2 = ['hi'];
+        console.log(a0.concat(a1,a2,"nihow"));
+        console.log([1,2,3].concat(4,5,6,[7,8,9]));
+        // -> [1,2,3,4,5,6,7,8,9]
+
+        
+        //n.reverse() : 反轉數組n
+        var a3 = ['a', 'b', 'c'];
+        console.log(a3.reverse());
+        
+        var str = 'helloworld';
+        var r = str.split('').reverse().join('=')
+        console.log(r);
+        
+
+        //indexOf(n, n1) : 重n1開始找尋n是否存在於數組中
+        var a4 = [10,20,30,40,50]
+        if(a4.indexOf(10, 2) > -1){
+            console.log('存在');
+        }
+        else{
+            console.log('不存在');
+        }
+    </script>
+</body>
+</html>
