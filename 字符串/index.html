@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //基本知識
+        // \r回車，\n換行
+        var str1 = "hello world"
+        var str2 = '12345'
+        console.log(str2.length);
+        
+        var long1 = '要換行需要轉義\
+        以\\進行轉義'
+        document.write(long1);
+        
+
+        //charAt(n) : 查詢n的內容  
+        var stra = 'abcdefg'
+        console.log(stra.length);
+        console.log(stra.charAt(0)); //index 0 -> a
+        console.log(stra.charAt(99)); //大於總長度 返回空字符串
+        console.log(stra.charAt(-1)); //無負概念 返回空字符串
+        
+        //concat(n1, n2, ...) : 連接字符串
+        var s1 = '<3 '
+        var s2 = 'sexyboy '
+        var s3 = 999
+        console.log(s2.concat(s1, s3)); //連接s2+s1+s3
+        console.log(s1+s2+s3);
+        
+        //substring(n1 ,n2) : 擷取n1 ~ n2字符串
+        //n1需大於n2 否則會自動翻轉| 負數會直接變0
+        var a1 = 'hello, here is 08880'
+        console.log(a1.substring(7,11)); //index: 7 ~ 10
+        console.log(a1.substring(7)); //默認到結尾
+        console.log(a1.substring(-1,5)); //0 ~ 4
+        console.log(a1.substring(5,-1)); // 5>0 -> 0 ~ 4
+        
+        //substr(n1 , n) 擷取n1開始的n個字數
+        console.log(a1.substr(7, 4)); 
+        console.log(a1.substr(0)); //默認到結尾
+        console.log(a1.substr(-5, 2)); //倒數五位數開始2位
+        console.log(a1.substr(3, -1)); //-1 -> 0，顯示0位 : 空字串
+
+        //indexOf(n) : 抓取n在字符串的位置，若無返回-1
+        var b1 = 'yo, hi baby'
+        var b2 = 'hi'
+        console.log(b1.indexOf("o")); //1
+        console.log(b1.indexOf("c")); //無c -> -1
+        console.log(b1.indexOf(b2)); //4 需整個字符串存在
+
+        //trim() : 去除字符串兩端的空格
+        var c1 = "   hello world  "
+        var c2 = '\n\rhello world   '
+        console.log(c1.trim());
+        console.log(c2);
+        console.log(c2.trim());
+
+        //ES6擴充 : trimEnd() trimStart()
+        console.log(c2.trimEnd()); //去尾
+        console.log(c2.trimStart()); //去頭
+
+        //split(n, n2) : 以n分割形成新的內容 以[]包裹(數組)
+        //n2可控制需要取幾個
+
+        var d1 = 'it|me|you'
+        var d2 = 'hello'
+        console.log(d1);
+        console.log(d1.split("|")); //['it', 'me', 'you'] > 數組
+        console.log(d1.split("|", 2)) //['it', 'me']
+        console.log(d2.split("")); //['h', 'e', 'l', 'l', 'o']
+        console.log(d2.split()); //返還完整字符串
+    </script>
+</body>
+</html>
